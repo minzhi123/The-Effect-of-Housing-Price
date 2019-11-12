@@ -1,0 +1,535 @@
+------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\jykj\Documents\RE.log
+  log type:  text
+ opened on:   2 May 2019, 23:50:06
+
+. gen def_lncon = lncon - lninf
+
+. gen def_lnp = lnp - lninf
+
+. gen def_lninc = lninc - lninf
+
+. gen def_lnha = lnha - lninf
+
+. gen def_lndep = lndep - lninf
+
+. gen def_lnroi = lnroi - lninf
+(45 missing values generated)
+
+. xtset city year1
+       panel variable:  city (strongly balanced)
+        time variable:  year1, 2003 to 2017
+                delta:  1 unit
+
+. xtunitroot ips d.def_lncon
+
+Im-Pesaran-Shin unit-root test for D.def_lncon
+----------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     14
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -5.3494                     -2.540  -2.210  -2.060
+ t-tilde-bar         -2.8797
+ Z-t-tilde-bar       -4.6344        0.0000
+------------------------------------------------------------------------------
+
+. xtunitroot ips def_lncon
+
+Im-Pesaran-Shin unit-root test for def_lncon
+--------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     15
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -1.1310                     -2.540  -2.210  -2.060
+ t-tilde-bar         -1.0879
+ Z-t-tilde-bar        0.7766        0.7813
+------------------------------------------------------------------------------
+
+. xtunitroot ips def_lnp
+
+Im-Pesaran-Shin unit-root test for def_lnp
+------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     15
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -1.3451                     -2.540  -2.210  -2.060
+ t-tilde-bar         -1.2703
+ Z-t-tilde-bar        0.2342        0.5926
+------------------------------------------------------------------------------
+
+. xtunitroot ips d.def_lnp
+
+Im-Pesaran-Shin unit-root test for D.def_lnp
+--------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     14
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -3.5666                     -2.540  -2.210  -2.060
+ t-tilde-bar         -2.5138
+ Z-t-tilde-bar       -3.5374        0.0002
+------------------------------------------------------------------------------
+
+. xtunitroot ips def_lninc
+
+Im-Pesaran-Shin unit-root test for def_lninc
+--------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     15
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -1.6608                     -2.540  -2.210  -2.060
+ t-tilde-bar         -1.4561
+ Z-t-tilde-bar       -0.3187        0.3750
+------------------------------------------------------------------------------
+
+. xtunitroot ips d.def_lninc
+
+Im-Pesaran-Shin unit-root test for D.def_lninc
+----------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     14
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -3.1650                     -2.540  -2.210  -2.060
+ t-tilde-bar         -2.3806
+ Z-t-tilde-bar       -3.1378        0.0009
+------------------------------------------------------------------------------
+
+. xtunitroot ips def_lnha
+
+Im-Pesaran-Shin unit-root test for def_lnha
+-------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     15
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -1.8243                     -2.540  -2.210  -2.060
+ t-tilde-bar         -1.5196
+ Z-t-tilde-bar       -0.5075        0.3059
+------------------------------------------------------------------------------
+
+. xtunitroot ips d.def_lnha
+
+Im-Pesaran-Shin unit-root test for D.def_lnha
+---------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     14
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -5.1211                     -2.540  -2.210  -2.060
+ t-tilde-bar         -2.8997
+ Z-t-tilde-bar       -4.6944        0.0000
+------------------------------------------------------------------------------
+
+. xtunitroot ips def_lndep
+
+Im-Pesaran-Shin unit-root test for def_lndep
+--------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     15
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -2.5194                     -2.540  -2.210  -2.060
+ t-tilde-bar         -2.1169
+ Z-t-tilde-bar       -2.2843        0.0112
+------------------------------------------------------------------------------
+
+. xtunitroot ips d.def_lndep
+
+Im-Pesaran-Shin unit-root test for D.def_lndep
+----------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     14
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -2.5279                     -2.540  -2.210  -2.060
+ t-tilde-bar         -2.0861
+ Z-t-tilde-bar       -2.2551        0.0121
+------------------------------------------------------------------------------
+
+. xtunitroot ips def_lnro
+
+Im-Pesaran-Shin unit-root test for def_lnroi
+--------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =      6
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar                     .                     -2.660  -2.280  -2.100
+ t-tilde-bar               .
+ Z-t-tilde-bar             .          *
+------------------------------------------------------------------------------
+* Normality of Z-t-tilde-bar requires at least 6 observations 
+  per panel with balanced data and no time trend.
+
+. display min roi
+min not found
+r(111);
+
+. display min.roi
+min:  operator invalid
+r(198);
+
+. display min(roi)
+invalid syntax
+r(198);
+
+. sum roi
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+         roi |         75    13.74683    44.22598     -35.85      147.7
+
+. replace roi=roi+35.85+1
+(75 real changes made)
+
+. xtunitroot ips def_lnroi
+
+Im-Pesaran-Shin unit-root test for def_lnroi
+--------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =      6
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar                     .                     -2.660  -2.280  -2.100
+ t-tilde-bar               .
+ Z-t-tilde-bar             .          *
+------------------------------------------------------------------------------
+* Normality of Z-t-tilde-bar requires at least 6 observations 
+  per panel with balanced data and no time trend.
+
+. replace lnroi=log(roi)
+(75 real changes made)
+
+. replace def_lnroi= lnroi-lninf
+(75 real changes made)
+
+. xtunitroot ips def_lnroi
+
+Im-Pesaran-Shin unit-root test for def_lnroi
+--------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     15
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -5.1492                     -2.540  -2.210  -2.060
+ t-tilde-bar         -2.9916
+ Z-t-tilde-bar       -4.8863        0.0000
+------------------------------------------------------------------------------
+
+. xtunitroot ips d.def_lnroi
+
+Im-Pesaran-Shin unit-root test for D.def_lnroi
+----------------------------------------------
+Ho: All panels contain unit roots           Number of panels  =      5
+Ha: Some panels are stationary              Number of periods =     14
+
+AR parameter: Panel-specific                Asymptotics: T,N -> Infinity
+Panel means:  Included                                        sequentially
+Time trend:   Not included
+
+ADF regressions: No lags included
+------------------------------------------------------------------------------
+                                              Fixed-N exact critical values
+                    Statistic      p-value         1%      5%      10%
+------------------------------------------------------------------------------
+ t-bar               -6.1473                     -2.540  -2.210  -2.060
+ t-tilde-bar         -3.0487
+ Z-t-tilde-bar       -5.1411        0.0000
+------------------------------------------------------------------------------
+
+. xtline lncon
+
+. corr def_lncon def_lnp def_lninc def_lnha def_lndep def_lnroi
+(obs=75)
+
+             | def_ln~n  def_lnp def_ln~c def_lnha def_l~ep def_ln~i
+-------------+------------------------------------------------------
+   def_lncon |   1.0000
+     def_lnp |   0.7963   1.0000
+   def_lninc |   0.9425   0.8386   1.0000
+    def_lnha |  -0.2765  -0.4742  -0.2619   1.0000
+   def_lndep |   0.7531   0.6005   0.7704  -0.1622   1.0000
+   def_lnroi |   0.0229   0.0017  -0.0037   0.1138  -0.0495   1.0000
+
+
+. xtreg def_lncon def_lnp def_lninc def_lnha def_lndep def_lnroi, fe
+
+Fixed-effects (within) regression               Number of obs     =         75
+Group variable: city                            Number of groups  =          5
+
+R-sq:                                           Obs per group:
+     within  = 0.9212                                         min =         15
+     between = 0.0083                                         avg =       15.0
+     overall = 0.8337                                         max =         15
+
+                                                F(5,65)           =     152.05
+corr(u_i, Xb)  = -0.1827                        Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+   def_lncon |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+     def_lnp |   .0947152   .0646351     1.47   0.148    -.0343699    .2238004
+   def_lninc |   .9313161   .0993881     9.37   0.000     .7328243    1.129808
+    def_lnha |   .0470918   .0317751     1.48   0.143    -.0163674    .1105511
+   def_lndep |  -.1876941   .1125741    -1.67   0.100    -.4125201    .0371319
+   def_lnroi |   .0008485   .0094313     0.09   0.929    -.0179872    .0196841
+       _cons |   1.021916   .2722341     3.75   0.000     .4782269    1.565605
+-------------+----------------------------------------------------------------
+     sigma_u |  .10059206
+     sigma_e |  .08637498
+         rho |  .57560343   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(4, 65) = 6.99                       Prob > F = 0.0001
+
+. estimate store fe
+
+. xtreg def_lncon def_lnp def_lninc def_lnha def_lndep def_lnroi, re
+
+Random-effects GLS regression                   Number of obs     =         75
+Group variable: city                            Number of groups  =          5
+
+R-sq:                                           Obs per group:
+     within  = 0.9118                                         min =         15
+     between = 0.6149                                         avg =       15.0
+     overall = 0.8924                                         max =         15
+
+                                                Wald chi2(5)      =     572.09
+corr(u_i, X)   = 0 (assumed)                    Prob > chi2       =     0.0000
+
+------------------------------------------------------------------------------
+   def_lncon |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+     def_lnp |  -.0021857   .0520664    -0.04   0.967    -.1042339    .0998625
+   def_lninc |   .7793235   .0835769     9.32   0.000     .6155157    .9431313
+    def_lnha |  -.0156391   .0184226    -0.85   0.396    -.0517467    .0204685
+   def_lndep |   .0544206   .0461326     1.18   0.238    -.0359976    .1448388
+   def_lnroi |   .0089795   .0104401     0.86   0.390    -.0114827    .0294417
+       _cons |   .4958879   .2313074     2.14   0.032     .0425337    .9492422
+-------------+----------------------------------------------------------------
+     sigma_u |          0
+     sigma_e |  .08637498
+         rho |          0   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. estimate store re
+
+. hausman re fe
+
+                 ---- Coefficients ----
+             |      (b)          (B)            (b-B)     sqrt(diag(V_b-V_B))
+             |       re           fe         Difference          S.E.
+-------------+----------------------------------------------------------------
+     def_lnp |   -.0021857     .0947152       -.0969009               .
+   def_lninc |    .7793235     .9313161       -.1519926               .
+    def_lnha |   -.0156391     .0470918       -.0627309               .
+   def_lndep |    .0544206    -.1876941        .2421147               .
+   def_lnroi |    .0089795     .0008485         .008131        .0044772
+------------------------------------------------------------------------------
+                           b = consistent under Ho and Ha; obtained from xtreg
+            B = inconsistent under Ha, efficient under Ho; obtained from xtreg
+
+    Test:  Ho:  difference in coefficients not systematic
+
+                  chi2(5) = (b-B)'[(V_b-V_B)^(-1)](b-B)
+                          =    -8.95    chi2<0 ==> model fitted on these
+                                        data fails to meet the asymptotic
+                                        assumptions of the Hausman test;
+                                        see suest for a generalized test
+
+. **********************************************************
+
+. xtreg def_lncon def_lnp def_lninc def_lnha def_lndep, fe
+
+Fixed-effects (within) regression               Number of obs     =         75
+Group variable: city                            Number of groups  =          5
+
+R-sq:                                           Obs per group:
+     within  = 0.9212                                         min =         15
+     between = 0.0078                                         avg =       15.0
+     overall = 0.8325                                         max =         15
+
+                                                F(4,66)           =     192.96
+corr(u_i, Xb)  = -0.1852                        Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+   def_lncon |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+     def_lnp |   .0959406   .0627071     1.53   0.131    -.0292582    .2211394
+   def_lninc |   .9325289   .0977269     9.54   0.000     .7374108    1.127647
+    def_lnha |   .0478581   .0303813     1.58   0.120    -.0128002    .1085164
+   def_lndep |  -.1899979    .108796    -1.75   0.085    -.4072161    .0272203
+       _cons |   1.026605   .2651819     3.87   0.000     .4971527    1.556058
+-------------+----------------------------------------------------------------
+     sigma_u |  .10126549
+     sigma_e |  .08572346
+         rho |   .5825471   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+F test that all u_i=0: F(4, 66) = 7.35                       Prob > F = 0.0001
+
+. estimate store fe
+
+. xtreg def_lncon def_lnp def_lninc def_lnha def_lndep, re
+
+Random-effects GLS regression                   Number of obs     =         75
+Group variable: city                            Number of groups  =          5
+
+R-sq:                                           Obs per group:
+     within  = 0.9109                                         min =         15
+     between = 0.6139                                         avg =       15.0
+     overall = 0.8912                                         max =         15
+
+                                                Wald chi2(4)      =     573.49
+corr(u_i, X)   = 0 (assumed)                    Prob > chi2       =     0.0000
+
+------------------------------------------------------------------------------
+   def_lncon |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+     def_lnp |   .0007985    .051854     0.02   0.988    -.1008334    .1024305
+   def_lninc |   .7796615   .0834205     9.35   0.000     .6161603    .9431627
+    def_lnha |  -.0134376   .0182099    -0.74   0.461    -.0491284    .0222532
+   def_lndep |   .0515056   .0459223     1.12   0.262    -.0385004    .1415117
+       _cons |    .497451   .2308699     2.15   0.031     .0449542    .9499477
+-------------+----------------------------------------------------------------
+     sigma_u |          0
+     sigma_e |  .08572346
+         rho |          0   (fraction of variance due to u_i)
+------------------------------------------------------------------------------
+
+. estimate store re
+
+. hausman re fe
+
+                 ---- Coefficients ----
+             |      (b)          (B)            (b-B)     sqrt(diag(V_b-V_B))
+             |       re           fe         Difference          S.E.
+-------------+----------------------------------------------------------------
+     def_lnp |    .0007985     .0959406        -.095142               .
+   def_lninc |    .7796615     .9325289       -.1528673               .
+    def_lnha |   -.0134376     .0478581       -.0612957               .
+   def_lndep |    .0515056    -.1899979        .2415035               .
+------------------------------------------------------------------------------
+                           b = consistent under Ho and Ha; obtained from xtreg
+            B = inconsistent under Ha, efficient under Ho; obtained from xtreg
+
+    Test:  Ho:  difference in coefficients not systematic
+
+                  chi2(4) = (b-B)'[(V_b-V_B)^(-1)](b-B)
+                          =   -10.88    chi2<0 ==> model fitted on these
+                                        data fails to meet the asymptotic
+                                        assumptions of the Hausman test;
+                                        see suest for a generalized test
+
+. save "C:\Users\jykj\Desktop\stats2\datafor5cities.dta", replace
+file C:\Users\jykj\Desktop\stats2\datafor5cities.dta saved
+
+. exit, clear
